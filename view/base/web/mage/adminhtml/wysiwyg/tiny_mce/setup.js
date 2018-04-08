@@ -26,8 +26,6 @@ define([
 			this.config = config;
 			this.schema = config.schema || html5Schema;
 
-			console.log(this.schema);
-
 			_.bindAll(this, 'beforeSetContent', 'saveContent', 'onChangeContent', 'openFileBrowser', 'updateTextArea');
 
 			varienGlobalEvents.attachEventHandler('tinymceChange', this.onChangeContent);
@@ -92,13 +90,14 @@ define([
 				}
 			}
 
+
 			var settings = {
 				mode: (mode != undefined ? mode : 'none'),
 				elements: this.id,
-				theme_advanced_buttons1: magentoPlugins + 'magentowidget,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect',
-				theme_advanced_buttons2: 'cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,forecolor,backcolor',
-				theme_advanced_buttons3: 'tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,iespell,media,advhr,|,ltr,rtl,|,fullscreen',
-				theme_advanced_buttons4: 'insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,pagebreak',
+			//	theme_advanced_buttons1: magentoPlugins + 'magentowidget,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect',
+			//	theme_advanced_buttons2: 'cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,forecolor,backcolor',
+			//	theme_advanced_buttons3: 'tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,iespell,media,advhr,|,ltr,rtl,|,fullscreen',
+			//	theme_advanced_buttons4: 'insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,pagebreak',
 				theme_advanced_toolbar_location: 'top',
 				theme_advanced_toolbar_align: 'left',
 				theme_advanced_statusbar_location: 'bottom',
@@ -107,13 +106,8 @@ define([
 				//selector: '#' + this.htmlId,
 				schema: "html5",
 				theme: 'modern',
-				plugins: [
-					'magentowidget advlist autolink lists link image charmap print preview hr anchor pagebreak',
-					'searchreplace wordcount visualblocks visualchars code fullscreen',
-					'insertdatetime media nonbreaking save table contextmenu directionality',
-					'emoticons template paste textcolor colorpicker textpattern imagetools autoresize'
-				],
-				toolbar1: 'insertfile undo redo | forecolor backcolor | styleselect | ' + magentoPlugins + ' magentowidget bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
+				plugins: plugins,
+				toolbar1: (magentoPlugins.length ? magentoPlugins + " " : "") + 'magentowidget | insertfile undo redo | forecolor backcolor | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
 				image_advtab: true,
 				//valid_elements: "*[*]",
 				codemirror: { indentOnInit: true },

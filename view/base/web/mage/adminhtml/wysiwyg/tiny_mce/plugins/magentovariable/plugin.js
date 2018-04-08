@@ -5,7 +5,7 @@
 
 /* global tinyMCE, tinymce, MagentovariablePlugin */
 /* eslint-disable strict */
-tinyMCE.addI18n({
+window.tinymce.addI18n({
     en: {
         magentovariable: {
             'insert_variable': 'Insert Variable'
@@ -40,8 +40,8 @@ tinyMCE.addI18n({
          */
         getInfo: function () {
             return {
-                longname: 'Magento Variable Manager Plugin for TinyMCE 3.x',
-                author: 'Magento Core Team',
+                longname: 'Magento Variable Manager Plugin for TinyMCE 4.x',
+                author: 'Magento Core Team, modified by Pavel Leonidov',
                 authorurl: 'http://magentocommerce.com',
                 infourl: 'http://magentocommerce.com',
                 version: '1.0'

@@ -5,7 +5,7 @@
 
 /* global tinyMCE, tinymce, widgetTools, Base64 */
 /* eslint-disable strict */
-tinyMCE.addI18n({
+window.tinymce.addI18n({
     en: {
         magentowidget: {
             'insert_widget': 'Insert Widget'
