@@ -15,7 +15,7 @@
         "tinymce 4"
     ],
     "type": "magento2-module",
-    "version": "1.0.0-beta",
+    "version": "1.0.0-alpha",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
