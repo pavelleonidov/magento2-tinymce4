@@ -2,7 +2,7 @@
  
 The current Magento 2 core is still working with the legacy TinyMCE 3.x editor, with all its disadvantages. This module contains the current version of TinyMCE 4 and upgrades all editor related core dependencies to be fully compatible with the Magento 2 backend, including customized plugins for inserting/editing widgets and variables.
 
-![](https://snag.gy/uY48Qa.jpg)
+![](https://snag.gy/qQeU4t.jpg)
 
 ## Requirements
 
