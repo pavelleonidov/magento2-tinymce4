@@ -56,7 +56,7 @@ tinyMCE.addI18n({
                         if (n.id && n.nodeName == 'IMG') { //eslint-disable-line eqeqeq
                             widgetCode = Base64.idDecode(n.id);
                             if (widgetCode.indexOf('{{widget') !== -1) {
-                                self.execCommand('mceMagentowidget');
+                                ed.execCommand('mceMagentowidget');
                             }
                         }
                     });
