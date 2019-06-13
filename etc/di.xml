@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Magento\Framework\Data\Form\Element\Editor" type="PavelLeonidov\TinyMce4\Element\Editor" />
-    <preference for="Magento\Cms\Model\Wysiwyg\Config" type="PavelLeonidov\TinyMce4\Model\Wysiwyg\Config" />
-    <preference for="Magento\Widget\Model\Widget\Config" type="PavelLeonidov\TinyMce4\Model\Widget\Config" />
-    <preference for="Magento\Variable\Model\Variable\Config" type="PavelLeonidov\TinyMce4\Model\Variable\Config" />
+<type name="Magento\Ui\Block\Wysiwyg\ActiveEditor">
+    <arguments>
+        <argument name="availableAdapterPaths" xsi:type="array">
+            <item name="PavelLeonidov_TinyMce4/tinymce4Adapter" xsi:type="string"/>
+        </argument>
+    </arguments>
+</type>
 </config>
