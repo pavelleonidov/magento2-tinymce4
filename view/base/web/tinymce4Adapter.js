@@ -276,7 +276,10 @@ define([
             // Set the document base URL
             if (this.config['document_base_url']) {
                 settings['document_base_url'] = this.config['document_base_url'];
+            } else {
+                settings['document_base_url'] = require.toUrl('PavelLeonidov_TinyMce4/lib/tinymce4');
             }
+
 
             if (this.config['files_browser_window_url']) {
                 /**
@@ -313,9 +316,14 @@ define([
                 });
             }
 
+            if (!settings['skin_url']) {
+                settings['skin_url'] = settings['document_base_url'] + '/skins/lightgray';
+            }
             if (this.config.settings) {
                 Object.extend(settings, this.config.settings);
             }
+
+
 
             return settings;
         },
