@@ -19,6 +19,8 @@ Via composer in the root directory of your Magento 2 installation:
 ```
 composer require pavelleonidov/module-tinymce4
 php bin/magento setup:upgrade && php bin/magento setup:di:compile
+# in production context:
+php bin/magento setup:static-content:deploy 
 ```
 
 ### Note:
