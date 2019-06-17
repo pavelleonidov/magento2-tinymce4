@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Cms\Model\Config\Source\Wysiwyg\Editor">
+		<arguments>
+			<argument name="adapterOptions" xsi:type="array">
+				<item name="tinymce" xsi:type="array">
+					<item name="value" xsi:type="string">PavelLeonidov_TinyMce4/tinymce4Adapter</item>
+					<item name="label" xsi:type="string" translatable="true">Alternative TinyMCE 4</item>
+				</item>
+			</argument>
+		</arguments>
+	</type>
+	<type name="Magento\Cms\Model\Wysiwyg\CompositeConfigProvider">
+		<arguments>
+			<argument name="wysiwygConfigPostProcessor" xsi:type="array">
+				<item name="PavelLeonidov_TinyMce4/tinymce4Adapter" xsi:type="string">PavelLeonidov\TinyMce4\Model\Config\Wysiwyg\Config</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
