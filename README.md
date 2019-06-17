@@ -16,8 +16,19 @@ The TinyMCE 4 module is tested and working with Magento 2.1.x, Magento 2.2.x and
 
 Via composer in the root directory of your Magento 2 installation:
 
+### Magento 2.3
 ```
 composer require pavelleonidov/module-tinymce4
+php bin/magento setup:upgrade && php bin/magento setup:di:compile
+# in production context:
+php bin/magento setup:static-content:deploy 
+```
+### Magento 2.2 and below
+
+Use the tag ^1.0 - version 2.0 and upwards are compatible with Magento 2.3 only.
+
+```
+composer require pavelleonidov/module-tinymce4:^1.0
 php bin/magento setup:upgrade && php bin/magento setup:di:compile
 # in production context:
 php bin/magento setup:static-content:deploy 
