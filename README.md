@@ -33,6 +33,3 @@ php bin/magento setup:upgrade && php bin/magento setup:di:compile
 # in production context:
 php bin/magento setup:static-content:deploy 
 ```
-
-### Note:
-The dev-master branch is compatible with Magento 2.3.x only. If you want to use this module for Magento 2.2 and lower, use the tagged version 1.0.x (same procedure as above, just don't use e. g. `composer require pavelleonidov/module-tinymce4:dev-master`)
