@@ -36,7 +36,7 @@ class Config extends \Magento\Widget\Model\Widget\Config {
 	public function getPluginSettings($config)
 	{
 		$url = $this->_assetRepo->getUrl(
-			'PavelLeonidov_TinyMce4/mage/adminhtml/wysiwyg/tiny_mce/plugins/magentowidget/plugin.js'
+			'PavelLeonidov_TinyMce4/mage/adminhtml/wysiwyg/tiny_mce/plugins/magentowidget/editor_plugin.js'
 		);
 		$settings = [
 			'widget_plugin_src' => $url,

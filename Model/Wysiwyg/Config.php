@@ -68,10 +68,9 @@ class Config extends \Magento\Cms\Model\Wysiwyg\Config implements ConfigInterfac
 					. $this->filesystem->getUri(DirectoryList::STATIC_VIEW) . '/',
 				'directives_url' => $this->_backendUrl->getUrl('cms/wysiwyg/directive'),
 
-				'skin_url' => $this->_assetRepo->getUrl('PavelLeonidov_TinyMce4/lib/tinymce4/css/skins/lightgray'),
-
-				'content_css' => $this->_assetRepo->getUrl('PavelLeonidov_TinyMce4/lib/tinymce4/css/skins/lightgray/content.min.css'),
-				'width' => '500px',
+				'skin_url' => $this->_assetRepo->getUrl('PavelLeonidov_TinyMce4/lib/tinymce4/skins/lightgray'),
+				'content_css' => $this->_assetRepo->getUrl('PavelLeonidov_TinyMce4/lib/tinymce4/skins/lightgray/content.min.css'),
+				'width' => '100%',
 				'height' => '500px',
 				'plugins' => [],
 			]

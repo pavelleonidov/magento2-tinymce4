@@ -41,7 +41,6 @@ class Editor extends \Magento\Framework\Data\Form\Element\Editor
      */
     public function getElementHtml()
 	{
-		//return parent::getElementHtml();
 
 		$preScript = '
 			<script type="text/javascript">
@@ -131,7 +130,7 @@ class Editor extends \Magento\Framework\Data\Form\Element\Editor
 							'.openFileBrowser);
 							//]]>
 							});			
-					 
+					
 				</script>
 			';
 
@@ -147,7 +146,7 @@ class Editor extends \Magento\Framework\Data\Form\Element\Editor
 				if ($this->getConfig('add_widgets')) {
 					$html .= '<script type="text/javascript">
                     //<![CDATA[
-                    require(["jquery", "mage/translate", "PavelLeonidov_TinyMce4/js/widget"], function(jQuery){
+                    require(["jquery", "mage/translate", "PavelLeonidov_TinyMce4/mage/adminhtml/wysiwyg/widget"], function(jQuery){
                         (function($) {
                             $.mage.translate.add(' . \Zend_Json::encode($this->getButtonTranslations()) . ')
                         })(jQuery);
