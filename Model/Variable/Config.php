@@ -35,7 +35,7 @@ class Config extends \Magento\Variable\Model\Variable\Config {
 	 */
 	public function getWysiwygJsPluginSrc()
 	{
-		$editorPluginJs = 'PavelLeonidov_TinyMce4/mage/adminhtml/wysiwyg/tiny_mce/plugins/magentovariable/plugin.js';
+		$editorPluginJs = 'PavelLeonidov_TinyMce4/mage/adminhtml/wysiwyg/tiny_mce/plugins/magentovariable/editor_plugin.js';
 		return $this->_assetRepo->getUrl($editorPluginJs);
 	}
 }

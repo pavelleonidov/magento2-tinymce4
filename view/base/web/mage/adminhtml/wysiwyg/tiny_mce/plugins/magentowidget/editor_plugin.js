@@ -30,7 +30,7 @@ window.tinymce.addI18n({
             ed.addButton('magentowidget', {
                 title: 'magentowidget.insert_widget',
                 cmd: 'mceMagentowidget',
-                image: url + '/img/icon.gif',
+                image: url + '/img/icon.png',
                 onPostRender: function() {
                     var self = this;
 
