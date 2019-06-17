@@ -16,11 +16,12 @@ define([
 		mediaBrowserTargetElementId: null,
 
 		initialize: function(htmlId, config) {
-
-
 			if (config.baseStaticUrl && config.baseStaticDefaultUrl) {
 				window.tinymce.baseURL = window.tinymce.baseURL.replace(config.baseStaticUrl, config.baseStaticDefaultUrl);
+			} else {
+				window.tinymce.baseURL = require.toUrl('PavelLeonidov_TinyMce4/lib/tinymce4');
 			}
+
 
 			this.id = htmlId;
 			this.config = config;
@@ -54,6 +55,7 @@ define([
 			if (jQuery.isReady) {
 				window.tinymce.dom.Event.domLoaded = true;
 			}
+
 
 			window.tinymce.init(this.getSettings(mode));
 		},
@@ -107,7 +109,7 @@ define([
 				schema: "html5",
 				theme: 'modern',
 				plugins: plugins,
-				toolbar1: (magentoPlugins.length ? magentoPlugins + " " : "") + 'magentowidget | insertfile undo redo | forecolor backcolor | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
+				toolbar1: 'styleselect | bold italic | forecolor backcolor | undo redo | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen | magentowidget' + (magentoPlugins.length ? ' ' + magentoPlugins : ""),
 				image_advtab: true,
 				//valid_elements: "*[*]",
 				codemirror: { indentOnInit: true },

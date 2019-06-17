@@ -31,7 +31,7 @@ window.tinymce.addI18n({
             ed.addButton('magentovariable', {
                 title: 'magentovariable.insert_variable',
                 cmd: 'mceMagentovariable',
-                image: url + '/img/icon.gif'
+                image: url + '/img/icon.png'
             });
         },
 
